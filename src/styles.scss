@@ -1,0 +1,671 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap");
+@import "~@fortawesome/fontawesome-free/css/all.css";
+@font-face {
+  font-family: "Poppins";
+  src: url("./assets/Poppins-Regular.ttf");
+}
+@import "./assets/scss/variables.scss";
+
+ion-calendar {
+  margin-top: 5px;
+  .title {
+    // box-shadow: 0 5px 3px rgba(0, 0, 0, 0.5);
+    .switch-btn {
+      width: 100% !important;
+    }
+  }
+}
+.highattendance,
+.exceed,
+.aquabg {
+  background: $color-secondary-bg;
+  p {
+    color: $color-white !important;
+  }
+}
+.bluebg {
+  background: $color-blue-bg-start;
+  p {
+    color: $color-white !important;
+  }
+}
+.moderateattendance,
+.moderate {
+  background: $color-primary-bg;
+  p {
+    color: $color-white !important;
+  }
+}
+.lowattendance,
+.poor,
+.redbg {
+  background: $color-accent-bg;
+  p {
+    color: $color-white !important;
+  }
+}
+.maxBarHeight {
+  background: $color-peach-bg;
+  opacity: 0.3;
+}
+
+.exceedDate {
+  // background: $color-secondary-bg;
+  p {
+    // color: $color-white !important;
+  }
+  &::after {
+    content: "";
+    width: 15px;
+    height: 3px;
+    margin-top: 5px;
+    background: $color-secondary-bg;
+    // opacity: 0.5;
+    border-radius: 2px;
+    position: absolute;
+    // bottom: -15px;
+    left: 12px;
+  }
+}
+.moderateDate {
+  // background: $color-primary-bg;
+  p {
+    // color: $color-white !important;
+  }
+  &::after {
+    content: "";
+    width: 15px;
+    height: 3px;
+    margin-top: 5px;
+    background: $color-primary-bg;
+    // opacity: 0.5;
+    border-radius: 2px;
+    position: absolute;
+    // bottom: -15px;
+    left: 12px;
+  }
+}
+.poorDate {
+  // background: $color-accent-bg;
+  p {
+    // color: $color-white !important;
+  }
+  &::after {
+    content: "";
+    width: 15px;
+    height: 3px;
+    margin-top: 5px;
+    background: $color-accent-bg;
+    // opacity: 0.5;
+    border-radius: 2px;
+    position: absolute;
+    // bottom: -15px;
+    left: 12px;
+  }
+}
+.approvedDate {
+  // background: $color-secondary-bg;
+  p {
+    // color: $color-white !important;
+  }
+  &::after {
+    content: "";
+    width: 15px;
+    height: 3px;
+    margin-top: 5px;
+    background: $color-secondary-bg;
+    // opacity: 0.5;
+    border-radius: 2px;
+    position: absolute;
+    // bottom: -15px;
+    left: 12px;
+  }
+}
+.pendingDate {
+  // background: $color-peach-bg;
+  // background: $color-white-bg !important;
+  p {
+    // color: $color-white !important;
+    // color: rgba(16, 16, 16, 0.3) !important;
+  }
+  &::after {
+    content: "";
+    width: 15px;
+    height: 3px;
+    margin-top: 5px;
+    background: $color-peach-bg;
+    // opacity: 0.5;
+    border-radius: 2px;
+    position: absolute;
+    // bottom: -15px;
+    left: 12px;
+  }
+}
+.rejectedDate {
+  // background: $color-accent-bg;
+  p {
+    // color: $color-white !important;
+  }
+  &::after {
+    content: "";
+    width: 15px;
+    height: 3px;
+    margin-top: 5px;
+    background: $color-accent-bg;
+    // opacity: 0.5;
+    border-radius: 2px;
+    position: absolute;
+    // bottom: -15px;
+    left: 12px;
+  }
+}
+.approved,
+.APPROVED {
+  background: $color-secondary-bg;
+  color: $color-white;
+  text-align: center;
+  p {
+    color: $color-white !important;
+  }
+}
+.rejected,
+.REJECTED {
+  background: $color-accent-bg;
+  color: $color-white;
+  text-align: center;
+  p {
+    color: $color-white !important;
+  }
+}
+.holiday,
+.HOLIDAY,
+.pending,
+.PENDING,
+.peachbg {
+  background: $color-peach-bg !important;
+  p {
+    color: $color-white !important;
+    // color: rgba(16, 16, 16, 0.3) !important;
+  }
+}
+.purplebg {
+  background: $color-purple-bg !important;
+  p {
+    color: $color-white !important;
+    // color: rgba(16, 16, 16, 0.3) !important;
+  }
+}
+.ashbg {
+  background: $color-ash-bg !important;
+  p {
+    color: $color-white !important;
+    // color: rgba(16, 16, 16, 0.3) !important;
+  }
+}
+.cancelled,
+.CANCELED,
+.CANCELLED {
+  background: $color-reject-dismiss !important;
+  p {
+    color: $color-white !important;
+    // color: rgba(16, 16, 16, 0.3) !important;
+  }
+}
+// .between button.days-btn, .between button.days-btn.holidayDate  {
+//   background: #85b1ff !important;
+// }
+//
+// .startSelection button.days-btn.holidayDate,
+// .endSelection button.days-btn.holidayDate {
+//   background: $color-blue-bg-start !important;
+// }
+.holidayDate {
+  // background: $color-peach-bg !important;
+  background: $color-white-bg !important;
+  // border: 1px solid $color-reject-dismiss !important;
+  p {
+    // color: $color-white !important;
+    color: $color-reject-dismiss !important; //rgba(16, 16, 16, 0.3) !important;
+    font-weight: $small_weight !important;
+  }
+  // &::after{
+  //   content: '';
+  //   width: 15px;
+  //   height: 3px;
+  //   margin-top: 5px;
+  //   background: $color-reject-dismiss;
+  //   // opacity: 0.5;
+  //   border-radius: 2px;
+  //   position: absolute;
+  //   // bottom: -15px;
+  //   left: 12px;
+  // }
+}
+.attendance,
+.ATTENDANCE,
+.attendanceDate {
+  // background: $color-light-purple-bg !important;
+  p {
+    // color: $color-white !important;
+  }
+  &::after {
+    content: "";
+    width: 15px;
+    height: 3px;
+    margin-top: 5px;
+    background: $color-purple-bg;
+    // opacity: 0.5;
+    border-radius: 2px;
+    position: absolute;
+    // bottom: -15px;
+    left: 12px;
+  }
+}
+
+// .on-selected {
+//   background: $color-blue-bg-start;
+// }
+
+.sectionTitle {
+  .item-inner {
+    margin-left: -16px;
+    border-bottom: none !important;
+    .label {
+      color: $color-black;
+      font-size: $title_font;
+      font-weight: $big_weight;
+      .icons {
+        color: $color-accent; //rgba(0,0,0,0.4);
+        // opacity: 0.8;
+        padding-right: 10px;
+      }
+      .add {
+        float: right;
+        font-size: 25px;
+        padding-right: 10px;
+      }
+    }
+  }
+}
+
+.inputTitle {
+  .item-inner {
+    margin-left: -16px;
+    // border-bottom: none !important;
+    .label {
+      color: $color-black;
+      font-size: $title_font;
+      font-weight: $big_weight;
+      .icons {
+        color: $color-accent; //rgba(0,0,0,0.4);
+        // opacity: 0.8;
+        padding-right: 10px;
+      }
+      .input-has-focus {
+        .label {
+          color: #488aff !important;
+          .icons {
+            color: #488aff !important;
+          }
+        }
+      }
+      .add {
+        float: right;
+        font-size: 25px;
+        padding-right: 10px;
+      }
+    }
+  }
+}
+.inputTitle.input-has-focus {
+  .item-inner {
+    margin-left: -16px;
+    // border-bottom: none !important;
+    .label {
+      color: #488aff !important;
+      font-size: $title_font;
+      font-weight: $big_weight;
+      .icons {
+        color: #488aff !important;
+        // opacity: 0.8;
+        padding-right: 10px;
+      }
+      .add {
+        float: right;
+        font-size: 25px;
+        padding-right: 10px;
+      }
+    }
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    // opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    // opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slide-left {
+  100% {
+    // opacity: 0;
+    transform: translateX(0%);
+  }
+  0% {
+    // opacity: 1;
+    transform: translateX(100%);
+  }
+}
+@keyframes slide-right {
+  0% {
+    // opacity: 1;
+    transform: translateX(-100%);
+  }
+  100% {
+    // opacity: 0;
+    transform: translateX(0%);
+  }
+}
+/*----------------------------sweet alert design----------------------*/
+.swal2-popup {
+  font-size: 0.7rem !important;
+}
+.swal2-title {
+  position: relative;
+  max-width: 100%;
+  margin: 0 0 0.4em;
+  padding: 0;
+  color: #595959;
+  font-size: 1.4em !important;
+  font-weight: 600;
+  text-align: center;
+  text-transform: none;
+  word-wrap: break-word;
+}
+.swal2-styled {
+  margin: 0.3125em;
+  padding: 0.625em 2em;
+  box-shadow: none;
+  font-weight: 500;
+}
+/*----------------------------sweet alert design----------------------*/
+
+/*---------------------login registration page design-----------------*/
+.custom_log_reg_btn {
+  /* background-color: navy !important; */
+  background: $color-primary-bg;
+  outline: none !important;
+  font-size: 14px !important;
+  padding: 0.25rem 0.9rem !important;
+  width: 100%;
+  color: $color-white !important;
+}
+.body-login {
+  background-image: url("../src/assets/image/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+.login-card-box label {
+  font-size: 14px !important;
+  /* color: grey !important; */
+}
+.hideAndShow {
+  cursor: pointer;
+  padding-top: 40px;
+  vertical-align: middle;
+  font-size: 14px;
+  color: grey;
+  position: absolute;
+  right: 48px;
+}
+.body-register .form-control.is-invalid,
+.was-validated .form-control:invalid,
+.body-login .form-control.is-invalid,
+.was-validated .form-control:invalid {
+  background-image: none !important;
+}
+.body-register .hideAndShow {
+  padding-top: 23px;
+}
+.body-register .btn-login,
+.body-login .btn-login {
+  background-color: #06a0bb;
+  color: $color-white;
+  font-weight: 300;
+  border-radius: 9px;
+  padding: 5px 15px;
+  font-size: 16px;
+}
+.body-register .btn-home,
+.body-login .btn-home {
+  background: $color-blue-bg;
+  color: $color-white;
+  font-weight: 300;
+  border-radius: 9px;
+  padding: 5px 15px;
+  font-size: 16px;
+}
+.straight-line {
+  height: 1.7px;
+  width: 140px;
+  background-color: black;
+  margin-bottom: 15px;
+}
+label {
+  display: inline-block;
+  margin-bottom: 0.01rem;
+}
+.form-control {
+  background-color: transparent;
+  height: calc(1.3em + 0.95rem + 0px);
+  background-clip: padding-box;
+  border-radius: 0px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  outline: none;
+  border: none;
+  border-bottom: 1.5px solid #989898 !important;
+}
+.form-control.is-invalid,
+.was-validated .form-control:invalid {
+  border-color: #989898 !important;
+}
+
+.invalid-feedback {
+  font-size: 67%;
+  color: $color-red;
+}
+.input-group-text {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0.375rem 0.75rem;
+  margin-bottom: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  text-align: center;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0px solid transparent;
+  border-radius: 0.25rem;
+}
+.body-register {
+  // background-image: url("../src/assets/image/bg.jpg");
+  /* background-position: top right; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+.reenter_pass_modal_title {
+  font-size: 16px !important;
+}
+.reenter_pass_modal_title img {
+  height: 20px;
+}
+.body-register #occurens-logo {
+  height: 65px;
+}
+.body-register .card-body-box {
+  font-size: 13px;
+}
+.body-register .card-title {
+  font-size: 17px;
+  margin-bottom: 0.35rem;
+}
+.body-register form label img,
+.body-login form label img {
+  height: 16px;
+  margin-right: 8px;
+  margin-top: -3px;
+}
+.body-register .form-group {
+  height: 50px;
+}
+.body-register .form-control {
+  height: calc(0.7em + 0.95rem + 0px);
+  font-size: 16px;
+  padding-left: 31px;
+}
+.body-register .invalid-feedback {
+  font-size: 71%;
+}
+.body-register .custom-select {
+  font-size: 14px;
+}
+.subscription-form .form-group {
+  height: 52px;
+}
+.sub-special {
+  height: 51px !important;
+}
+.subscription-form small {
+  font-size: 87%;
+}
+.subscription-form .invalid-feedback {
+  font-size: 78%;
+  color: $color-red;
+}
+/*---------------------------------------------------------------*/
+
+.cursor_pointer {
+  cursor: pointer;
+}
+
+//===========================================
+
+.genaral-holiday {
+  .generalHoliday {
+    margin: 10px 0;
+    padding: 3px;
+    background: $color-aqua-bg;
+    // background: linear-gradient(40deg, #2096ff, #05ffa3);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    h2 {
+      color: $bold-text-color-code;
+      font-size: 17px;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+    .buttons {
+      display: flex;
+      label {
+        box-shadow: 0px 3px 2px 0px #737272;
+        border: 1px solid white;
+        border-radius: 3px;
+        div {
+          border-radius: 3px;
+        }
+        font-weight: $big_weight;
+        &:nth-child(1) {
+          border-top-left-radius: 10px !important;
+          div {
+            border-top-left-radius: 10px !important;
+          }
+        }
+        &:nth-child(7) {
+          border-top-right-radius: 10px !important;
+          div {
+            border-top-right-radius: 10px !important;
+          }
+        }
+        margin: 0px;
+        width: calc(100% / 7);
+        input {
+          display: none;
+        }
+        div {
+          padding: 13px 0;
+          // border-radius: 3px;
+          text-align: center;
+          font-family: $main-font;
+          font-size: 14px;
+          color: $color-white;
+        }
+        input:checked + div {
+          background: $color-peach-bg;
+          color: $my-color-white;
+        }
+      }
+    }
+  }
+}
+.HolidayCard {
+  display: flex;
+  box-shadow: 0 2px 5px 0px rgba(0, 0, 0, 0.5);
+  margin-bottom: 3px;
+  height: 70px;
+  position: relative;
+  .day {
+    // position: absolute;
+    font-size: $floating_font;
+    color: $color-white;
+    background: $color-peach-bg;
+    padding: 3px 13px;
+    height: 25px;
+    min-width: 120px;
+    margin-top: 8px;
+    margin-left: 5px;
+    border-radius: 3px;
+  }
+  .desc {
+    position: absolute;
+    font-size: $input_font;
+    // color: #bdbdbd;
+    padding-left: 0px;
+    margin-top: 40px;
+    margin-left: 10px;
+  }
+}
+.chartrate {
+  width: 100%;
+  height: 7px;
+  background: $color-gray;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 5px 0;
+  div {
+    animation: slide-right 0.5s ease;
+    height: 100%;
+    border-radius: 7px;
+  }
+}
+
+//==========================================
+
+// -----------------all import extra files------------------------
+@import "./assets/scss/customBootstrap.scss";
+@import "./assets/scss/components/switchDesign.scss";
+@import "./assets/scss/pages/membersList.scss";
+@import "./assets/scss/components/memberStatusbutton.scss";
+//----------------- all components scss files -------------------
